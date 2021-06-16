@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 class Fibonacci implements Runnable{
+	
 	public void run(){
 		int a=0,b=1,c=0,l=20;
 		System.out.println("FIBONACCI SERIES UPTO "+l+": \n");
