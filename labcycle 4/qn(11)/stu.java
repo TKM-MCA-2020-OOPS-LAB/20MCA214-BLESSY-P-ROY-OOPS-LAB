@@ -1,33 +1,22 @@
 import java.util.*;
-class Student
-{
-String name;
-LinkedList<String> l_list = new LinkedList<String>();
-public void Student()
-{
-Scanner sc=new Scanner(System.in);
-System.out.println("Enter name :");
-name= sc.nextLine();
-l_list.add(name);
-sc.close();
-}
-void display()
-{
-	System.out.println("The Original linked list: " + l_list);
-	l_list.clear();
-	System.out.println("The New linked list After deletion: " + l_list);
-}
-}
-public class stu{
-public static void main(String[] args) {
-	Scanner sc=new Scanner(System.in);
-	Student s=new Student();
-   System.out.println("enter the limit");
-   int n=sc.nextInt();
-   for(int i=0;i<n;i++)
-   {
-	  s.Student();
-   }
-   s.display();
-}
+public class linked list {
+	public static void main(String[] args) {
+	   LinkedList<String> list=new LinkedList<String>();
+	   Scanner sc=new Scanner(System.in);
+	   System.out.println("Enter number of employees:");
+	   int num=sc.nextInt();
+	   for(int i=1;i<=num;i++){
+        System.out.print("Add the name of employee id="+i+":");
+        String s=sc.next();
+        list.add(s);
+        }
+      System.out.println();
+      System.out.println("LinkedList After adding employees:");
+      Iterator<String> itr=list.iterator();
+      while(itr.hasNext()){
+        System.out.println(itr.next());
+      }
+     list.clear();
+     System.out.println("Linked list After removing employees: "+list);
+  }
 }
